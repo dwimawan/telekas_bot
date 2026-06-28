@@ -1,0 +1,20 @@
+{
+  "name": "tele-finance-bot",
+  "version": "1.0.0",
+  "description": "Bot Telegram pencatatan keuangan pribadi — Vercel + Google Sheets",
+  "private": true,
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  },
+  "notes": {
+    "zero-dependencies": "Sengaja tanpa library eksternal. Auth Google Sheets pakai JWT manual (Node.js built-in crypto). Fetch API pakai Node 18 native fetch."
+  }
+}
