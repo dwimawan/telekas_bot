@@ -2,8 +2,7 @@
   "version": 2,
   "functions": {
     "api/webhook.js": {
-      "maxDuration": 30,
-      "runtime": "nodejs24.18.0"
+      "maxDuration": 30
     }
   },
   "routes": [

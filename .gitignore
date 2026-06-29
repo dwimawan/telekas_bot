@@ -6,4 +6,4 @@ node_modules/
 *.log
 .DS_Store
 git reset --soft HEAD~1
-TESTING_*
+TESTING_*.md
