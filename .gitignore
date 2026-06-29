@@ -1,5 +1,9 @@
 node_modules/
-.env.local
 .env
+.env.local
+.env.example
 .vercel/
 *.log
+.DS_Store
+git reset --soft HEAD~1
+TESTING_*

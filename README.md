@@ -192,6 +192,41 @@ Bot otomatis menebak kategori berdasarkan kata kunci di keterangan:
 
 ---
 
+## Testing Lokal di WSL (Sebelum Deploy)
+
+**Jangan langsung deploy ke Vercel. Test dulu lokal dengan ngrok tunnel supaya webhook kamu bisa diterima Telegram dari internet.**
+
+### Quick Start (5 Langkah)
+
+```bash
+# Terminal 1 — Setup & install dependencies
+./scripts/quickstart-dev.sh
+nano .env.local  # Edit dengan credential kamu
+
+# Terminal 1 — Start dev server
+npm start
+# Output: 🚀 Development server running on http://localhost:3000
+
+# Terminal 2 (window baru) — Start ngrok tunnel
+ngrok http 3000
+# Output: Forwarding https://abc123def456.ngrok.io -> http://localhost:3000
+
+# Terminal 3 (window baru) — Register webhook
+TELEGRAM_TOKEN=xxx node scripts/set-webhook.js https://abc123def456.ngrok.io
+
+# Terminal 4 (Telegram) — Test bot
+# Kirim: /start, /help, 50000 makan siang, +500k gaji, /undo
+```
+
+**Setelah semua berjalan lancar → siap deploy ke Vercel.**
+
+### Dokumentasi Lengkap
+
+- [`TESTING_LOCAL.md`](./TESTING_LOCAL.md) — Setup lengkap + troubleshooting
+- [`TESTING_REFERENCE.md`](./TESTING_REFERENCE.md) — Architecture diagram + command reference
+
+---
+
 ## Troubleshooting
 
 **Bot tidak merespons:**

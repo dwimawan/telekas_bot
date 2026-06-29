@@ -20,7 +20,7 @@ const {
  * @param {import('@vercel/node').VercelRequest} req
  * @param {import('@vercel/node').VercelResponse} res
  */
-export default async function handler(req, res) {
+async function handler(req, res) {
   // Vercel otomatis parse JSON body
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -122,3 +122,6 @@ function isAllowed(chatId) {
   }
   return ALLOWED_CHAT_IDS.includes(String(chatId));
 }
+
+// Export untuk Vercel + local server.js
+module.exports = handler;
