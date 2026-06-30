@@ -388,6 +388,17 @@ server.js — Local development HTTP server
 - [ ] Multi-currency support
 - [ ] Bank API integration (automatic import)
 
+## 🚀 Update: Monitoring & Source of Fund (30 Juni 2026)
+
+- ✅ **Batch Input**: Mendukung pesan multi-baris (setiap baris = 1 transaksi).
+- ✅ **Source of Fund (SOF)**: Penambahan kolom SOF (G) dengan tag `@` (default: BRI).
+- ✅ **Monitoring Commands**: 4 perintah (keyword biasa): `hari ini`, `minggu ini`, `bulan ini`, `riwayat`.
+- ✅ **Insight & Analytics**: Perbandingan periode dan top 3 pengeluaran terbesar.
+- ✅ **Fixes**: Escape MarkdownV2 untuk karakter spesial, parsing nominal dengan ribuan/rupiah.
+- ✅ **Dinamis Cycle**: Siklus bulanan kini mengikuti `MONTHLY_START_DATE` (default 25), otomatis menyesuaikan akhir bulan.
+
+---
+
 ---
 
 ## 📞 Support & Troubleshooting
